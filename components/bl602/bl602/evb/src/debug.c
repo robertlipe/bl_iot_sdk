@@ -292,8 +292,9 @@ char *fcvtbuf(double arg, int ndigits, int *decpt, int *sign, char *buf)
   return cvt(arg, ndigits, decpt, sign, buf, 0);
 }
 
-#ifndef DISABLE_PRINT_FLOAT
-static void ee_bufcpy(char *pd, char *ps, int count) {
+static void ee_bufcpy(char *d, char *s, int count); 
+ 
+void ee_bufcpy(char *pd, char *ps, int count) {
 	char *pe=ps+count;
 	while (ps!=pe)
 		*pd++=*ps++;
@@ -499,7 +500,6 @@ static char *flt(char *str, double num, int size, int precision, char fmt, int f
 
   return str;
 }
-#endif //  DISABLE_PRINT_FLOAT
 
 
 /*use O0 preventing consuming more stack*/

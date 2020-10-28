@@ -1,1 +1,0 @@
-gcc -g -Wall tcp-echo-server.c -luv -o server

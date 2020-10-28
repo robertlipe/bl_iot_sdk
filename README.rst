@@ -1,8 +1,5 @@
 README
 =========
 
-Bouffalolab bl_iot_sdk. Support BL602 Wi-Fi/BLE Combo RISC-V based Chip.
+用户可以在Windows或Linux环境下开发BL_IoT模组软件，Windows开发用户请参考 `Windows <docs/Quickstart_Guide/Windows/Quickstart_Windows_msys.rst>`__ ；Linux开发用户请参考 `Linux <docs/Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.rst>`__ 。
 
-Check ``docs/html`` for more detail.
-
-Fire an issue, if you have any issue or need any support.

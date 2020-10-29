@@ -129,7 +129,6 @@ static int get_dts_addr(const char *name, uint32_t *start, uint32_t *off)
 
 static void cmd_play_audio(char *buf, int len, int argc, char **argv)
 {
-    int sampling = 0;
     int fd_audio;
     romfs_filebuf_t filebuf;
     //uint16_t  *p_u16addr;
@@ -148,7 +147,7 @@ static void cmd_play_audio(char *buf, int len, int argc, char **argv)
     p_u32addr = filebuf.buf;
     bufsize = filebuf.bufsize;
     
-    audio_dac_dma_test(p_u32addr, bufsize, sampling); 
+    audio_dac_dma_test(p_u32addr, bufsize); 
 
     return;
 

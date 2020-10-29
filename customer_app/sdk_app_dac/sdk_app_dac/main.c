@@ -131,7 +131,7 @@ static void cmd_play_audio(char *buf, int len, int argc, char **argv)
 {
     int fd_audio;
     romfs_filebuf_t filebuf;
-    uint16_t  *p_u16addr;
+    uint16_t *p_u16addr;
     uint32_t bufsize;
     
     fd_audio = aos_open("/romfs/audio_32k", 0);
@@ -148,7 +148,7 @@ static void cmd_play_audio(char *buf, int len, int argc, char **argv)
     p_u16addr = (uint16_t*) filebuf.buf;
     bufsize = filebuf.bufsize;
     
-    audio_dac_dma_test(p_u32addr, bufsize); 
+    audio_dac_dma_test(p_u16addr, bufsize); 
 
     return;
 
